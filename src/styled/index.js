@@ -9,7 +9,7 @@ export const Route = styled(Link)`
     color: black;
     padding: 0 0.5em;
     @media (max-width: 400px) {
-        font-size: 13px;
+        font-size: 11px;
         font-weight: bold;
       }
     ${props => props.darkMode && `color: white;

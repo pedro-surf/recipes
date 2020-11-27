@@ -12,7 +12,6 @@ export default function Header({ language, darkMode }) {
     return (
         <StyledHeader darkMode={darkMode}>
             {paths}
-            {darkMode}
         </StyledHeader>
     )
 }
