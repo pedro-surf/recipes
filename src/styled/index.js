@@ -70,7 +70,7 @@ export const InputContainer = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-    padding: .2em .2em .2em 0;
+    padding: .2em;
     @media (max-width: 400px) {
         width: 95%;
       }
@@ -78,7 +78,7 @@ export const ButtonsContainer = styled.div`
 
 export const RecipeContainer = styled.div`
     @media (max-width: 400px) {
-        padding: .2em 0 .2em .55em;
+        padding: .2em;
     }
 `;
 
