@@ -68,10 +68,22 @@ export const InputContainer = styled.div`
     padding: .5em;
 `;
 
+export const ButtonsContainer = styled.div`
+    padding: .5em;
+    @media (max-width: 400px) {
+        width: 97%;
+      }
+`;
+
 export const RecipesActionsContainer = styled.div`
+    margin: 0 .3em;
     display: flex;
-    flex-direction: row;
-    padding-left: 1.8em;
+    width: 100%;
+    flex-direction: column;
+    @media (min-width: 400px) {
+        padding-left: 1.8em;
+        flex-direction: row;
+      }
     justify-content: space-around;
 `;
 
