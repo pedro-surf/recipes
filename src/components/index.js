@@ -1,0 +1,10 @@
+export { default as Home } from './Home'
+export { default as About } from './About'
+export { default as Recipes } from './Recipes'
+export { default as Header } from './Header';
+export { default as AddRecipe } from './AddRecipe';
+export { default as RecipesList } from './RecipesList';
+export { default as RecipeItem } from './RecipeItem';
+export { default as RecipesActions } from './RecipesActions';
+export { default as FilterRecipes } from './FilterRecipes';
+export { default as Settings } from './Settings';
