@@ -7,16 +7,17 @@ import { red } from '@material-ui/core/colors';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { RecipeContainer } from '../styled';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: 341,
+        width: 344,
         minHeight: 360,
         height: '100%'
     },
     expandedCard: {
-        width: 341,
+        width: 344,
         minHeight: 370,
     },
     media: {
@@ -62,57 +63,59 @@ function RecipeItem({ data, removeRecipe }) {
 
     return (
         <Grow in timeout={1500}>
-            <Card className={expanded ? classes.expandedCard : classes.root}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}>
-                            {data.strMeal.substr(0, 1).toUpperCase()}
-                        </Avatar>
-                    }
-                    title={data.strMeal}
-                    titleTypographyProps={{ variant: data.strMeal.length > 20 ? 'h7' : 'h5' }}
-                    subheader={data.strTags}
-                />
-                {data.strMealThumb &&
-                    <CardMedia
-                        className={classes.media}
-                        image={data.strMealThumb}
+            <RecipeContainer>
+                <Card className={expanded ? classes.expandedCard : classes.root}>
+                    <CardHeader
+                        avatar={
+                            <Avatar aria-label="recipe" className={classes.avatar}>
+                                {data.strMeal.substr(0, 1).toUpperCase()}
+                            </Avatar>
+                        }
                         title={data.strMeal}
+                        titleTypographyProps={{ variant: data.strMeal.length > 20 ? 'h7' : 'h6' }}
+                        subheader={data.strTags ? data.strTags.replace(',', ', ') : `(No tags)`}
                     />
-                }
-                <CardContent>
-                    <Typography variant="body1" color="textSecondary" component="p">
-                        Origin: {data.strArea}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {data.strCategory}
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <IconButton onClick={() => handleCopy()} aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                    <IconButton onClick={() => removeRecipe(data.id || data.idMeal)}>
-                        <DeleteIcon />
-                    </IconButton>
-                    <IconButton
-                        className={clsx(classes.expand, {
-                            [classes.expandOpen]: expanded,
-                        })}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
-                        aria-label="show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    {data.strMealThumb &&
+                        <CardMedia
+                            className={classes.media}
+                            image={data.strMealThumb}
+                            title={data.strMeal}
+                        />
+                    }
                     <CardContent>
-                        <Typography paragraph>Method:</Typography>
-                        {instructions}
+                        <Typography variant="body1" color="textSecondary" component="p">
+                            Origin: {data.strArea}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {data.strCategory}
+                        </Typography>
                     </CardContent>
-                </Collapse>
-            </Card>
+                    <CardActions disableSpacing>
+                        <IconButton onClick={() => handleCopy()} aria-label="share">
+                            <ShareIcon />
+                        </IconButton>
+                        <IconButton onClick={() => removeRecipe(data.id || data.idMeal)}>
+                            <DeleteIcon />
+                        </IconButton>
+                        <IconButton
+                            className={clsx(classes.expand, {
+                                [classes.expandOpen]: expanded,
+                            })}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+                            <ExpandMoreIcon />
+                        </IconButton>
+                    </CardActions>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <CardContent>
+                            <Typography paragraph>Method:</Typography>
+                            {instructions}
+                        </CardContent>
+                    </Collapse>
+                </Card>
+            </RecipeContainer>
         </Grow>
     );
 }

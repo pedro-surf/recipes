@@ -9,7 +9,8 @@ export const Route = styled(Link)`
     color: black;
     padding: 0 0.5em;
     @media (max-width: 400px) {
-        font-size: 16px;
+        font-size: 13px;
+        font-weight: bold;
       }
     ${props => props.darkMode && `color: white;
     &:hover {
@@ -69,14 +70,19 @@ export const InputContainer = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-    padding: .5em;
+    padding: .2em .2em .2em 0;
     @media (max-width: 400px) {
-        width: 97%;
+        width: 95%;
       }
 `;
 
+export const RecipeContainer = styled.div`
+    @media (max-width: 400px) {
+        padding: .2em 0 .2em .55em;
+    }
+`;
+
 export const RecipesActionsContainer = styled.div`
-    margin: 0 .3em;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -84,7 +90,10 @@ export const RecipesActionsContainer = styled.div`
         padding-left: 1.8em;
         flex-direction: row;
       }
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: .45em;
 `;
 
 export const JustifiedContainer = styled.div`

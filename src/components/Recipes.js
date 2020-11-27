@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { addRecipe, deleteAllRecipes, removeRecipe, setRecipes, filterRecipes } from '../reducers/meals'
 import { AddRecipe, RecipesActions, RecipesList, FilterRecipes } from '.'
 import { Badge, Fade, Grid, Grow } from '@material-ui/core';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 import { RecipesContainer, JustifiedContainer } from '../styled'
 import { genRandomLetter } from '../utils'
 import { toast } from 'react-toastify'
@@ -35,11 +36,18 @@ const Recipes = p => {
 
   return (
     <RecipesContainer>
-      <h1>{t[p.language].recipes} <Badge badgeContent={p.items.length} showZero overlap="circle" />
-      </h1>
-      <Grid container>
-
-        <Grid item xs={12} md={6}>
+      <h2 style={{ marginBottom: '.3em' }}>
+        {t[p.language].recipes}
+      </h2>
+      <Badge
+          children={<ReceiptIcon />}
+          color="secondary"
+          badgeContent={p.items.length}
+          showZero
+          overlap="circle"
+        />
+      <Grid justify="center" container>
+        <Grid item xs={12} md={viewForm && viewFilter ? 7 : 8}>
           <RecipesActions
             onFetch={onFetch}
             deleteAll={p.deleteAllRecipes}

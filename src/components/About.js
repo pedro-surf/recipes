@@ -4,7 +4,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const About = () => (
   <StyledContainer>
-    <h1>About this app</h1>
+    <h2>About this app</h2>
     <StyledParagraph>This project was developed for a job test.</StyledParagraph>
     <StyledParagraph>
       It uses React-Redux and Material-UI, and might be used as boilerplate for SPA projects in general.

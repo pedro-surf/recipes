@@ -9,7 +9,7 @@ const RecipesList = ({ data, removeRecipe, darkMode }) => {
     }
 
     return (
-        <Grid style={{ marginTop: '2em', backgroundColor: darkMode ? '#002884' : 'white' }} container justify="center" spacing={2}>
+        <Grid style={{ marginTop: '2em', maxWidth: '100%', backgroundColor: darkMode ? '#002884' : 'white' }} container justify="center" spacing={2}>
             {data.map((recipe, index) =>
                 <Grid key={index} item>
                     <RecipeItem removeRecipe={removeRecipe} data={recipe} />

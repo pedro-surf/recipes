@@ -10,6 +10,7 @@ const t = {
         about: "About",
         recipes: "Recipes",
         hideForm: "Hide Form",
+        hideFilter: "Hide Filter"
     },
     es: {
         addRecipe: "Agregar Receta",
@@ -21,7 +22,8 @@ const t = {
         home: "Página Inicial",
         about: "Acerca de",
         recipes: "Recetas",
-        hideForm: "Ocultar Formulário"
+        hideForm: "Ocultar Formulário",
+        hideFilter: "Ocultar Filtro"
     },
     pt: {
         addRecipe: "Adicionar Receita",
@@ -33,7 +35,8 @@ const t = {
         home: "Página Inicial",
         about: "Sobre",
         recipes: "Receitas",
-        hideForm: "Ocultar Formulário"
+        hideForm: "Ocultar Formulário",
+        hideFilter: "Ocultar Filtro"
     }
 };
 

@@ -34,7 +34,7 @@ export default function RecipesActions({ i18n, onFetch, deleteAll, setViewForm, 
                             onClick={() => setViewFilter(!viewFilter)}
                             style={styles.btnOrange}
                         >
-                            {t[i18n].filterRecipes}
+                            {!viewFilter ? t[i18n].filterRecipes : t[i18n].hideFilter}
                         </Button>
                     </ButtonsContainer>
                     <ButtonsContainer>
