@@ -13,7 +13,7 @@ const App = ({ language, darkMode }) => (
     <ToastContainer autoClose={2400} closeOnClick />
     <main>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Home />
         </Route>
 

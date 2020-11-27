@@ -9,6 +9,9 @@ const About = () => (
     <StyledParagraph>
       It uses React-Redux and Material-UI, and might be used as boilerplate for SPA projects in general.
     </StyledParagraph>
+    <StyledParagraph>
+      Built from scratch in a dozen hours.
+      </StyledParagraph>
     <StyledParagraph style={{ color: 'green', marginTop: '1.2em' }}>
       <a href="https://github.com/pedro-surf" rel="noopener noreferrer" target="_blank">
        <GitHubIcon /> @pedro-surf
