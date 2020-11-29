@@ -8,6 +8,10 @@ const s = {
         backgroundColor: "#ffc107 ", 
         color: 'black', 
         padding: '6px 16px'
+    },
+    recipesGrid: {
+        maxWidth: '100%', 
+        marginTop: '2em' 
     }
 };
 
