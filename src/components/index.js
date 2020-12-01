@@ -8,3 +8,4 @@ export { default as RecipeItem } from './RecipeItem';
 export { default as RecipesActions } from './RecipesActions';
 export { default as FilterRecipes } from './FilterRecipes';
 export { default as Settings } from './Settings';
+export { default as LoginForm } from './LoginForm';
